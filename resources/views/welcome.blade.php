@@ -65,7 +65,7 @@
 		</div>
 		<div class="row">
 			<div class="col">
-				<span>Welcome to my online repository! Here you may explore various edits and tools made by me from PES 2014 until PES 2018.</span>
+				<span>Welcome to my online repository! Here you may explore various edits and tools made by me from PES 2014 forward.</span>
 			</div>
 		</div>
 		<div class="row" style="margin-top: 30px;">

@@ -28,7 +28,7 @@ class MainController extends Controller
 	public function search($words) {
 		$search_results = [];
 		$edits = Edit::get();
-		$tokens = explode(' ', $words);
+		$tokens = explode('-', $words);
 		foreach($edits as $edit) {
 			foreach ($tokens as $token) {
 				if(strpos(strtolower($edit->title), strtolower($token)) !== false) {
@@ -36,8 +36,9 @@ class MainController extends Controller
 				}
 			}
 		}
-		$data['edits'] = $search_results;
-		$data['search_words'] = $words;
+		$search_query = str_replace('-', ' ', $words);
+		$data['edits'] = array_unique($search_results); // removes duplicate posts
+		$data['search_words'] = $search_query;
 		return View::make('search', $data);
 	}
 

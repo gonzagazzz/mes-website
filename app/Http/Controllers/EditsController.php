@@ -30,13 +30,8 @@ class EditsController extends Controller
 		$cat = Category::where('slug', $category)->first();
 		$edit = Edit::where('version', $version)->where('category_id', $cat->id)->where('slug',$edit_slug)->first();
 		$comments = Comment::where('edit_id', $edit->id)->paginate(5);
-		$data['title'] = $edit->title;
-		$data['description'] = $edit->description;
-		$data['image_url'] = $edit->image_url;
-		$data['download_url'] = $edit->download_url;
-		$data['date'] = $edit->date;
+		$data['edit'] = $edit;
 		$data['keywords'] = explode(';', $edit->keywords);
-		$data['filesize'] = $edit->filesize;
 		$data['comments'] = $comments;
 		$data['version'] = $version;
 		$data['other_posts'] = Edit::where('version', $version)->inRandomOrder()->paginate(5);
