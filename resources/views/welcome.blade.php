@@ -46,6 +46,11 @@
 			-moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.3);
 			box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.3);
 		}
+		.version-bar {
+			margin-top: 15px;
+			background-color: white !important;
+			padding: 15px;
+		}
 	</style>
 </head>
 <body>
@@ -145,7 +150,7 @@
 				<p>Browse various Pro Evolution Soccer edits by category. Below is a list of the available categories for each Pro Evolution Soccer version.</p>
 			</div>
 		</div>
-		<div class="row" style="margin-top: 30px;">
+		<div class="row version-bar" style="margin-top: 0;">
 			<div class="col-2">
 				<img src="img/pes/2014.png" width="156">
 			</div>
@@ -155,7 +160,7 @@
 				</span>
 			</div>
 		</div>
-		<div class="row" style="margin-top: 30px;">
+		<div class="row version-bar">
 			<div class="col-2">
 				<img src="img/pes/2015.png" width="156">
 			</div>
@@ -165,7 +170,7 @@
 				</span>
 			</div>
 		</div>
-		<div class="row" style="margin-top: 30px;">
+		<div class="row version-bar">
 			<div class="col-2">
 				<img src="img/pes/2016.png" width="156">
 			</div>
@@ -175,7 +180,7 @@
 				</span>
 			</div>
 		</div>
-		<div class="row" style="margin-top: 30px;">
+		<div class="row version-bar">
 			<div class="col-2">
 				<img src="img/pes/2017.png" width="156">
 			</div>
@@ -185,7 +190,7 @@
 				</span>
 			</div>
 		</div>
-		<div class="row" style="margin-top: 30px;">
+		<div class="row  version-bar">
 			<div class="col-2">
 				<img src="img/pes/2018.png" width="156">
 			</div>
