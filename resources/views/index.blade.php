@@ -318,7 +318,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-12 slide fade" style="padding: 0;">
-				<a href=""><img style="width: 100%;" src="img/slideshow/slides/1.png" ondragstart="return false;"></a>
+				<a href="/welcome"><img style="width: 100%;" src="img/slideshow/slides/1.png" ondragstart="return false;"></a>
 				<div class="bottom-left slideshow-lbl-container">
 					<span class="slideshow-lbl">Welcome to my new website!</span>
 				</div>

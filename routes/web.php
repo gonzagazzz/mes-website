@@ -77,6 +77,9 @@ Route::get('privacy-policy', [
 Route::get('terms-and-conditions', [
     'uses' => 'MainController@termsAndConditions'
 ]);
+Route::get('welcome', [
+    'uses' => 'MainController@welcome'
+]);
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 

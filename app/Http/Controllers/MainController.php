@@ -75,4 +75,8 @@ class MainController extends Controller
 		return View::make('terms-and-conditions', $data);
 	}
 
+	public function welcome() {
+		return View::make('welcome');
+	}
+
 }

@@ -72,7 +72,7 @@
 
 	<h1>Keyword: {{ $keyword }}</h1>
 
-	<div class="container">
+	<div class="container" style="margin-bottom: 100px;">
 		@foreach($edits as $edit)
 			<div class="row edit-container">
 				<div class="col-3" style="padding: 0px; margin: 0px;">
@@ -111,5 +111,7 @@
 			</div>
 		@endforeach
 	</div>
+
+	@include('partials/footer')
 </body>
 </html>

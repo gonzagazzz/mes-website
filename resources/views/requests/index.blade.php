@@ -118,6 +118,13 @@
 	<h1>Requests</h1>
 
 	<div class="container" style="padding-bottom: 40px;">
+		@if(count($requests) == 0)
+		<div class="row" style="margin-bottom: 300px;">
+			<div class="col" align="center">
+				<span style="font-size: 14px;">No requests to show</span>
+			</div>
+		</div>
+		@else
 		@foreach($requests as $request)
 		<div class="request" style="margin-bottom: 40px;">
 			<div class="row">
@@ -165,6 +172,7 @@
 				{{ $requests->links() }}
 			</div>
 		</div>
+		@endif
 	</div>
 
 	<div class="container-fluid upvote-frame" id="upvote-frame">
