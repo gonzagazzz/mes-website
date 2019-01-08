@@ -15,36 +15,36 @@
 		}
 		.card-1 {
 			background-image: url('img/background/background_2.png') !important;
-			background-size: 100%;
+			background-size: cover;
 			padding: 30px;
 			color: white !important;
 			border: 0 !important;
-			margin-right: 30px;
 			-webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.3);
 			-moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.3);
 			box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.3);
+			margin-bottom: 30px;
 		}
 		.card-2 {
 			background-image: url('img/background/background_1.png') !important;
-			background-size: 100%;
+			background-size: cover;
 			padding: 30px;
 			color: white !important;
 			border: 0 !important;
-			margin-right: 30px;
 			-webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.3);
 			-moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.3);
 			box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.3);
+			margin-bottom: 30px;
 		}
 		.card-3 {
 			background-image: url('img/background/background_3.png') !important;
-			background-size: 100%;
+			background-size: cover;
 			padding: 30px;
 			color: white !important;
 			border: 0 !important;
-			margin-right: 30px;
-			-webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.3);
+				-webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.3);
 			-moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.3);
 			box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.3);
+			margin-bottom: 30px;
 		}
 		.version-bar {
 			margin-top: 15px;
@@ -57,7 +57,7 @@
 	@include('partials/header')
 	@include('partials/float')
 
-	<div class="container" style="color: white; margin-bottom: 100px;">
+	<div class="container" style="color: white;">
 		<div class="row">
 			<div class="col">
 				<h1>Welcome to MES Modder's Repository</h1>
@@ -79,7 +79,7 @@
 			</div>
 		</div>
 		<div class="row" style="margin-top: 30px;" align="center">
-			<div class="col card-1">
+			<div class="col-xl-4 col-md-12 card-1">
 				<div class="container">
 					<div class="row">
 						<div class="col">
@@ -99,7 +99,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col card-2">
+			<div class="col-xl-4 col-md-12 card-2">
 				<div class="container">
 					<div class="row">
 						<div class="col">
@@ -119,7 +119,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col card-3">
+			<div class="col-xl-4 col-md-12 card-3">
 				<div class="container">
 					<div class="row">
 						<div class="col">
@@ -140,7 +140,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="row" style="margin-top: 30px;">
+		<div class="row">
 			<div class="col">
 				<h2>Start browsing</h2>
 			</div>
@@ -151,7 +151,7 @@
 			</div>
 		</div>
 		<div class="row version-bar" style="margin-top: 0;">
-			<div class="col-2">
+			<div class="col-4">
 				<img src="img/pes/2014.png" width="156">
 			</div>
 			<div class="col">
@@ -161,7 +161,7 @@
 			</div>
 		</div>
 		<div class="row version-bar">
-			<div class="col-2">
+			<div class="col-4">
 				<img src="img/pes/2015.png" width="156">
 			</div>
 			<div class="col">
@@ -171,7 +171,7 @@
 			</div>
 		</div>
 		<div class="row version-bar">
-			<div class="col-2">
+			<div class="col-4">
 				<img src="img/pes/2016.png" width="156">
 			</div>
 			<div class="col">
@@ -181,7 +181,7 @@
 			</div>
 		</div>
 		<div class="row version-bar">
-			<div class="col-2">
+			<div class="col-4">
 				<img src="img/pes/2017.png" width="156">
 			</div>
 			<div class="col">
@@ -190,8 +190,8 @@
 				</span>
 			</div>
 		</div>
-		<div class="row  version-bar">
-			<div class="col-2">
+		<div class="row  version-bar" style="margin-bottom: 100px;">
+			<div class="col-4">
 				<img src="img/pes/2018.png" width="156">
 			</div>
 			<div class="col">
