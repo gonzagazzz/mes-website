@@ -2,51 +2,8 @@
 <html>
 <head>
 	<title>Requests - MES Modder's Repository</title>
-	<link rel="shortcut icon" href="{{{ asset('img/logo.png') }}}">
 	<meta name="csrf-token" content="{{ csrf_token() }}">
-
-	<style type="text/css">
-		body {
-			background-color: #222222 !important;
-		    color: white !important;
-		}
-		h1 {
-			text-align: center;
-			padding-top: 45px;
-			padding-bottom: 35px;
-		}
-		.request {
-			background-color: white;
-			color: #222222;
-		}
-		.request-message {
-			padding-right: 15px;
-			padding-left: 15px;
-		}
-
-		.upvote-btn {
-			cursor: pointer;
-		}
-		@keyframes appear {
-		    from {width: 0px;}
-		    to {width: 600px;}
-		}
-		.upvote-frame {
-			background: rgba(0, 0, 0, 0.6);
-			position: fixed;
-    		top: 0px;
-    		display: none;
-    		padding-top: 44px;
-    		z-index: 999;
-		}
-		.upvote-emote {
-			border-radius: 30px;
-			-webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.75);
-			-moz-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.75);
-			box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.75);
-			animation: appear 1.5s forwards;
-		}
-	</style>
+	@include('partials/imports')
 
 	<script type="text/javascript">
 		function togglePreview(element) {
@@ -60,6 +17,10 @@
 			img.href = nextPreview;
 			img = img.children[0];
 			img.src = nextPreview;
+		}
+		function hideInvalid(img) {
+			$(img).parent().parent().parent().hide();
+			$(img).parent().parent().parent().next().hide()
 		}
 		function upvote(request_id){
 	    	var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
@@ -106,16 +67,16 @@
                 error: function (data) {
                 	alert("Error upvoting");
                 }
-	        });
-	        
+	        });    
 		}
 	</script>
 </head>
 <body>
-	@include('partials/header')
+	@include('partials/navbar')
+
 	@include('partials/float')
 
-	<h1>Requests</h1>
+	<h1 style="margin-top: 55px;">Requests</h1>
 
 	<div class="container" style="padding-bottom: 40px;">
 		@if(count($requests) == 0)
@@ -129,7 +90,7 @@
 		<div class="request" style="margin-bottom: 40px;">
 			<div class="row">
 				<div class="col-12">
-					<a href="{{ explode(';', $request->previews)[0] }}" target="_blank"><img src="{{ explode(';', $request->previews)[0] }}" style="object-fit: cover; object-position: 0 0; width: 100%; height: 320px;" data-toggle="tooltip" data-placement="top" title="Click on the preview to see the full image"></a>
+					<a href="{{ explode(';', $request->previews)[0] }}" target="_blank"><img src="{{ explode(';', $request->previews)[0] }}" style="object-fit: cover; object-position: 0 0; width: 100%; height: 320px;" data-toggle="tooltip" data-placement="top" title="Click on the preview to see the full image" onerror="hideInvalid(this)"></a>
 				</div>
 			</div>
 			<div class="row" align="center">
@@ -140,7 +101,7 @@
 				</div>
 				@endfor
 			</div>
-			<div class="row">
+			<div class="row" style="padding-top: 15px;">
 				<div class="col my-auto">
 					<img src="/img/user-icon.png" width="22" style="margin-left: 15px; margin-right: 8px;">
 					@if($request->getUser != NULL)

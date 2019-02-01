@@ -34,9 +34,9 @@ class EditsController extends Controller
 		$data['keywords'] = explode(';', $edit->keywords);
 		$data['comments'] = $comments;
 		$data['version'] = $version;
-		$data['other_posts'] = Edit::where('version', $version)->inRandomOrder()->paginate(5);
+		$data['other_posts'] = Edit::where('version', $version)->inRandomOrder()->paginate(4);
 		//Data count
-		$edit->views++;
+		//$edit->views++;
 		$edit->save();
 		return View::make('posts.post', $data);
 	}

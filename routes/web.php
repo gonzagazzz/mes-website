@@ -32,9 +32,11 @@ Route::post('upvote', [
 Route::get('keywords/{keyword}', [
     'uses' => 'EditsController@keywords'
 ]);
+/*
 Route::get('search/{words}', [
     'uses' => 'MainController@search'
 ]);
+*/
 Route::get('toggle', [
     'uses' => 'MainController@toggleMemes'
 ]);

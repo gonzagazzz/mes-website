@@ -2,16 +2,10 @@
 <html>
 <head>
     <title>Privacy Policy - MES Modder's Repository</title>
-    <style type="text/css">
-        body {
-            background-color: #222222 !important;
-            color: #fdfdfd !important;
-        }
-    </style>
+    @include('partials/imports')
 </head>
-<body>
-
-    @include('partials/header')
+<body style="color: white;">
+    @include('partials/navbar')
 
     @include('partials/float')
 

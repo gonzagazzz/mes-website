@@ -53,7 +53,11 @@ class MainController extends Controller
 	}
 
 	public function sendPM() {
-		return View::make('send-pm');
+		if (Auth::check()) {
+			return View::make('send-pm');
+		} else {
+			return redirect()->action('MainController@index');
+		}
 	}
 
 	public function storePM(Request $request) {

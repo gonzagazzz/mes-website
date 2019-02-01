@@ -2,21 +2,7 @@
 <html>
 <head>
 	<title>Add Request - MES Modder's Repository</title>
-	<link rel="shortcut icon" href="{{{ asset('img/logo.png') }}}">
-	<style type="text/css">
-		body {
-		    background-color: #222222 !important;
-		    color: white !important;
-		}
-		h1 {
-			text-align: center;
-			padding-top: 45px;
-			padding-bottom: 35px;
-		}
-		.link-add {
-			font-size: 40px;
-		}
-	</style>
+	@include('partials/imports')
 
 	<script type="text/javascript">
 		function addPreviewField() {
@@ -32,15 +18,18 @@
 			row = col.parentNode;
 			row.remove();
 		}
+		$(function () {
+			$('[data-toggle="popover"]').popover()
+		})
 	</script>
 </head>
 <body>
-
-	@include('partials/header')
+	@include('partials/navbar')
 
 	@include('partials/float')
 
-	<h1>Add Request</h1>
+	<h1 style="margin-top: 55px;">Add Request</h1>
+	<center style="color: white; margin-bottom: 30px;">If you want a customized edit, this is the place to ask. Every request is listed <a href="{{ URL::to('/') }}/requests">here</a> and you can upvote the ones you prefer to prioritize their creation.</center>
 
 	<form method="POST" action="{{ action('RequestsController@store') }}" enctype="multipart/form-data">
 		{{ csrf_field() }}
@@ -48,7 +37,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<h5>Previews</h5>
+					<h5 style="color: white;">Previews <i class="fa fa-sm fa-info-circle" style="cursor: pointer;" data-toggle="popover" title="Previews" data-content="Submit links of images that portray the request you wish. For each new link, click the '+' button."></i></h5>
 				</div>
 			</div>
 			<div id="previews-container">
@@ -61,9 +50,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row" style="margin-top: 30px;">
 				<div class="col">
-					<h5>Message</h5>
+					<h5 style="color: white;">Message <i class="fa fa-sm fa-info-circle" style="cursor: pointer;" data-toggle="popover" title="Message" data-content="Describe the kind of request you wish. Be aware that this message will be published in the website and everyone will be able to read it."></i></h5>
 				</div>
 			</div>
 			<div class="row">

@@ -17,7 +17,11 @@ class RequestsController extends Controller
 	}
 
 	public function add() {
-		return View::make('requests.add');
+		if (Auth::check()) {
+			return View::make('requests.add');
+		} else {
+			return redirect()->action('RequestsController@index');
+		}
 	}
 
 	public function store(Request $request) {

@@ -2,25 +2,14 @@
 <html>
 <head>
 	<title>Send Private Message - MES Modder's Repository</title>
-	<link rel="shortcut icon" href="{{{ asset('img/logo.png') }}}">
-	
-	<style type="text/css">
-		body {
-			background-color: #222222 !important;
-			color: white !important;
-		}
-		h1 {
-			text-align: center;
-			padding-top: 45px;
-			padding-bottom: 35px;
-		}
-	</style>
+	@include('partials/imports')
 </head>
 <body>
-	@include('partials/header')
+	@include('partials/navbar')
+
 	@include('partials/float')
 
-	<h1>Send Private Message</h1>
+	<h1 style="margin-top: 55px;">Send Private Message</h1>
 
 	<form method="POST" action="{{ action('MainController@storePM') }}" enctype="multipart/form-data" style="margin-bottom: 130px;">
 		{{ csrf_field() }}

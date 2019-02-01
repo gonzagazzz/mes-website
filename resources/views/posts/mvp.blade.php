@@ -2,62 +2,8 @@
 <html>
 <head>
 	<title>PES {{ $version }} Most Viewed Posts - MES Modder's Repository</title>
-	<link rel="shortcut icon" href="{{{ asset('img/logo.png') }}}">
 	<meta name="csrf-token" content="{{ csrf_token() }}">
-
-	<style type="text/css">
-		body {
-			background-color: #222222 !important;
-			color: #f2f2f2 !important;
-		}
-		h1 {
-			text-align: center;
-			padding-top: 45px;
-			padding-bottom: 35px;
-		}
-		.mvp-container {
-			border-radius: 12px;
-			margin: 25px;
-			color: #222222;
-		}	
-		.mvp-frame {
-			background-size: cover;
-			background-position: center;
-			height: 200px;
-			width: 200px;
-			border-radius: 50%;
-			margin-top: 15px;
-			margin-bottom: 15px;
-			-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-			-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-		}
-		.mvp-frame:hover {
-			border: solid #f2f2f2 2px;
-		}
-		.upvote-btn {
-			cursor: pointer;
-		}
-		@keyframes appear {
-		    from {width: 0px;}
-		    to {width: 600px;}
-		}
-		.upvote-frame {
-			background: rgba(0, 0, 0, 0.6);
-			position: fixed;
-    		top: 0px;
-    		display: none;
-    		padding-top: 44px;
-    		z-index: 999;
-		}
-		.upvote-emote {
-			border-radius: 30px;
-			-webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.75);
-			-moz-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.75);
-			box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.75);
-			animation: appear 1.5s forwards;
-		}
-	</style>
+	@include('partials/imports')
 
 	<script type="text/javascript">
 		function upvote(edit_id){
@@ -111,10 +57,11 @@
 	</script>
 </head>
 <body>
-	@include('partials/header')
+	@include('partials/navbar')
+	
 	@include('partials/float')
 
-	<h1>Most Viewed Posts - PES {{ $version }}</h1>
+	<h1 style="margin-top: 55px; padding-right: 10px; padding-left: 10px;">Most Viewed Posts - PES {{ $version }}</h1>
 
 	<div class="container-fluid">
 		<div class="row">
