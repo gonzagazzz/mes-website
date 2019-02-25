@@ -3,7 +3,7 @@
 		<div class="col-2 my-auto">
 			<i class="fa fa-bars fa-lg" id="hamburger" onclick="toggle()" style=""></i>
 		</div>
-		<div class="col-8 my-auto" align="center">
+		<div class="col-8" style="height: 100%;" align="center">
 			<a href="{{ URL::to('/') }}"><img src="{{ asset('img/logo.png') }}" class="navbar-logo"></a>
 		</div>
 		@if(Auth::check())
