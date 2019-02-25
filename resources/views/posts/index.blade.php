@@ -18,7 +18,14 @@
                 },
                 success: function (data) {
                 	if(data == "logged-out") {
-                		alert("You must be logged in order to upvote!");
+                		$.notify({
+                			// options
+                			message: 'You must have an account in order to upvote. Click here to login',
+                			url: '/login'
+                		},{
+                			// settings
+                			type: 'danger'
+                		});
                 	} else {
                 		upvotes = document.getElementById(edit_id);
                 		current = parseInt(upvotes.innerHTML);
