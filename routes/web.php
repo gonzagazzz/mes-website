@@ -14,6 +14,27 @@
 
 Route::get('/', 'MainController@index');
 
+Route::get('pumm/create', [
+    'uses' => 'EditsController@pummCreate'
+]);
+Route::get('pumm/associate', [
+    'uses' => 'EditsController@pummAssociate'
+]);
+Route::get('pumm/edit', [
+    'uses' => 'EditsController@pummEdit'
+]);
+Route::get('pumm/delete', [
+    'uses' => 'EditsController@pummDelete'
+]);
+Route::get('pumm/generate', [
+    'uses' => 'EditsController@pummGenerate'
+]);
+Route::get('pumm/import-export', [
+    'uses' => 'EditsController@pummImportExport'
+]);
+Route::get('pumm', [
+    'uses' => 'EditsController@pumm'
+]);
 Route::get('pes{version}/tools', [
     'uses' => 'EditsController@tools'
 ]);

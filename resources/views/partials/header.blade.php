@@ -225,11 +225,11 @@
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129352793-1"></script>
 	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-	  gtag('config', 'UA-129352793-1');
+		gtag('config', 'UA-129352793-1');
 	</script>
 
 </head>
@@ -295,42 +295,42 @@
 				<button type="button" class="menu-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{URL::to('/')}}/img/pes/2014.png" width="168" ondragstart="return false;"><img style="width: 6px; margin-left: 26px;" src="{{URL::to('/')}}/img/right-arrow.png" ondragstart="return false;"></button>
 				<div class="dropdown-menu menu-effect menu-options" style="padding: 0; margin: 0; border-radius: 0; border: 1px solid white">
 					<a class="disable-link-effect" href="{{URL::to('/')}}/pes2014/gloves">
-				    	<div class="dropdown-item menu-link" id="gloves">
-				    		<div class="menu-option-icon" style="background-image: url('/img/categories/menu/dark/gloves.png');">&nbsp;</div>
-				    		<span style="font-size: 14px;">Gloves</span>
-				    	</div>
-			    	</a>
-			    	<a class="disable-link-effect" href="{{URL::to('/')}}/pes2014/locker-rooms">
-				    	<div class="dropdown-item menu-link" id="lockerrooms">
-				    		<div class="menu-option-icon" style="background-image: url('/img/categories/menu/dark/locker_rooms.png');">&nbsp;</div>
-				    		<span style="font-size: 14px;">Locker Rooms</span>
-				    	</div>
-			    	</a>
-			    	<a class="disable-link-effect" href="{{URL::to('/')}}/pes2014/menus">
-				    	<div class="dropdown-item menu-link" id="menus">
-				    		<div class="menu-option-icon" style="background-image: url('/img/categories/menu/dark/menus.png');">&nbsp;</div>
-				    		<span style="font-size: 14px;">Menus</span>
-				    	</div>
-			    	</a>
-			    	<a class="disable-link-effect" href="{{URL::to('/')}}/pes2014/music-packs">
-				    	<div class="dropdown-item menu-link" id="musicpacks">
-				    		<div class="menu-option-icon" style="background-image: url('/img/categories/menu/dark/music_packs.png');">&nbsp;</div>
-				    		<span style="font-size: 14px;">Music Packs</span>
-				    	</div>
-			    	</a>
-			    	<a class="disable-link-effect" href="{{URL::to('/')}}/pes2014/start-screens">
-				    	<div class="dropdown-item menu-link" id="startscreens">
-				    		<div class="menu-option-icon" style="background-image: url('/img/categories/menu/dark/start_screens.png');">&nbsp;</div>
-				    		<span style="font-size: 14px;">Start Screens</span>
-				    	</div>
-			    	</a>
-			    	<a class="disable-link-effect" href="{{URL::to('/')}}/pes2014/tools">
-				    	<div class="dropdown-item menu-link" id="tools">
-				    		<div class="menu-option-icon" style="background-image: url('/img/categories/menu/dark/tools.png');">&nbsp;</div>
-				    		<span style="font-size: 14px;">Tools</span>
-				    	</div>
-			    	</a>
-			 	</div>
+						<div class="dropdown-item menu-link" id="gloves">
+							<div class="menu-option-icon" style="background-image: url('/img/categories/menu/dark/gloves.png');">&nbsp;</div>
+							<span style="font-size: 14px;">Gloves</span>
+						</div>
+					</a>
+					<a class="disable-link-effect" href="{{URL::to('/')}}/pes2014/locker-rooms">
+						<div class="dropdown-item menu-link" id="lockerrooms">
+							<div class="menu-option-icon" style="background-image: url('/img/categories/menu/dark/locker_rooms.png');">&nbsp;</div>
+							<span style="font-size: 14px;">Locker Rooms</span>
+						</div>
+					</a>
+					<a class="disable-link-effect" href="{{URL::to('/')}}/pes2014/menus">
+						<div class="dropdown-item menu-link" id="menus">
+							<div class="menu-option-icon" style="background-image: url('/img/categories/menu/dark/menus.png');">&nbsp;</div>
+							<span style="font-size: 14px;">Menus</span>
+						</div>
+					</a>
+					<a class="disable-link-effect" href="{{URL::to('/')}}/pes2014/music-packs">
+						<div class="dropdown-item menu-link" id="musicpacks">
+							<div class="menu-option-icon" style="background-image: url('/img/categories/menu/dark/music_packs.png');">&nbsp;</div>
+							<span style="font-size: 14px;">Music Packs</span>
+						</div>
+					</a>
+					<a class="disable-link-effect" href="{{URL::to('/')}}/pes2014/start-screens">
+						<div class="dropdown-item menu-link" id="startscreens">
+							<div class="menu-option-icon" style="background-image: url('/img/categories/menu/dark/start_screens.png');">&nbsp;</div>
+							<span style="font-size: 14px;">Start Screens</span>
+						</div>
+					</a>
+					<a class="disable-link-effect" href="{{URL::to('/')}}/pes2014/tools">
+						<div class="dropdown-item menu-link" id="tools">
+							<div class="menu-option-icon" style="background-image: url('/img/categories/menu/dark/tools.png');">&nbsp;</div>
+							<span style="font-size: 14px;">Tools</span>
+						</div>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -359,34 +359,34 @@
 					<a class="disable-link-effect" href="{{URL::to('/')}}/pes2016/corner-flags">
 						<div class="dropdown-item menu-link" id="cornerflags">
 							<div class="menu-option-icon" style="background-image: url('/img/categories/menu/dark/corner_flags.png');">&nbsp;</div>
-				    		<span style="font-size: 14px;">Corner Flags</span>
-				    	</div>
-			    	</a>
-			    	<a class="disable-link-effect" href="{{URL::to('/')}}/pes2016/locker-rooms">
-				    	<div class="dropdown-item menu-link" id="lockerrooms">
-				    		<div class="menu-option-icon" style="background-image: url('/img/categories/menu/dark/locker_rooms.png');">&nbsp;</div>
-				    		<span style="font-size: 14px;">Locker Rooms</span>
-				    	</div>
-			    	</a>
-			    	<a class="disable-link-effect" href="{{URL::to('/')}}/pes2016/menus">
-				    	<div class="dropdown-item menu-link" id="menus">
-				    		<div class="menu-option-icon" style="background-image: url('/img/categories/menu/dark/menus.png');">&nbsp;</div>
-				    		<span style="font-size: 14px;">Menus</span>
-				    	</div>
-			    	</a>
-			    	<a class="disable-link-effect" href="{{URL::to('/')}}/pes2016/scoreboards">
-				    	<div class="dropdown-item menu-link" id="scoreboards">
-				    		<div class="menu-option-icon" style="background-image: url('/img/categories/menu/dark/scoreboards.png');">&nbsp;</div>
-				    		<span style="font-size: 14px;">Scoreboards</span>
-				    	</div>
-			    	</a>
-			    	<a class="disable-link-effect" href="{{URL::to('/')}}/pes2016/start-screens">
-				    	<div class="dropdown-item menu-link" id="startscreens">
-				    		<div class="menu-option-icon" style="background-image: url('/img/categories/menu/dark/start_screens.png');">&nbsp;</div>
-				    		<span style="font-size: 14px;">Start Screens</span>
-				    	</div>
-			    	</a>
-			 	</div>
+							<span style="font-size: 14px;">Corner Flags</span>
+						</div>
+					</a>
+					<a class="disable-link-effect" href="{{URL::to('/')}}/pes2016/locker-rooms">
+						<div class="dropdown-item menu-link" id="lockerrooms">
+							<div class="menu-option-icon" style="background-image: url('/img/categories/menu/dark/locker_rooms.png');">&nbsp;</div>
+							<span style="font-size: 14px;">Locker Rooms</span>
+						</div>
+					</a>
+					<a class="disable-link-effect" href="{{URL::to('/')}}/pes2016/menus">
+						<div class="dropdown-item menu-link" id="menus">
+							<div class="menu-option-icon" style="background-image: url('/img/categories/menu/dark/menus.png');">&nbsp;</div>
+							<span style="font-size: 14px;">Menus</span>
+						</div>
+					</a>
+					<a class="disable-link-effect" href="{{URL::to('/')}}/pes2016/scoreboards">
+						<div class="dropdown-item menu-link" id="scoreboards">
+							<div class="menu-option-icon" style="background-image: url('/img/categories/menu/dark/scoreboards.png');">&nbsp;</div>
+							<span style="font-size: 14px;">Scoreboards</span>
+						</div>
+					</a>
+					<a class="disable-link-effect" href="{{URL::to('/')}}/pes2016/start-screens">
+						<div class="dropdown-item menu-link" id="startscreens">
+							<div class="menu-option-icon" style="background-image: url('/img/categories/menu/dark/start_screens.png');">&nbsp;</div>
+							<span style="font-size: 14px;">Start Screens</span>
+						</div>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>

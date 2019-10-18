@@ -525,3 +525,14 @@ h1 {
 	background-color: white !important;
 	padding: 15px;
 }
+
+/* PUMM */
+.pumm-lnk:hover {
+	color: white;
+}
+h2.pumm {
+	color: white !important;
+	text-align: center;
+	margin-top: -25px;
+	padding-bottom: 35px;
+}

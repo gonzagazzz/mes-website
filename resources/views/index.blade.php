@@ -8,66 +8,61 @@
 
 	<script type="text/javascript">
 		$(document).keyup(function(e) {
-		    if (e.keyCode == 39) {
-		        slideshowNext();
-		    } else if (e.keyCode == 37) {
-		        slideshowPrevious();
-		    }
+			if (e.keyCode == 39) {
+				slideshowNext();
+			} else if (e.keyCode == 37) {
+				slideshowPrevious();
+			}
 		});
 		function upvote(edit_id){
-	    	var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
-	        $.ajax({
-	            type: "post",
+			var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+			$.ajax({
+				type: "post",
                 url: 'upvote',
                 data: {
-                	_token: CSRF_TOKEN,
-                	edit_id: edit_id,
-                	user_id: '{{ (Auth::check() == 1 ? Auth::user()->id : null) }}'
+					_token: CSRF_TOKEN,
+					edit_id: edit_id,
+					user_id: '{{ (Auth::check() == 1 ? Auth::user()->id : null) }}'
                 },
                 success: function (data) {
-                	if(data == "logged-out") {
-                		$.notify({
+					if(data == "logged-out") {
+						$.notify({
                 			// options
-                			message: 'You must have an account in order to upvote. Click here to login',
-                			url: '/login'
-                		},{
+							message: 'You must have an account in order to upvote. Click here to login',
+							url: '/login'
+						},	{
                 			// settings
-                			type: 'danger'
-                		});
-                	} else {
-                		upvotes = document.getElementById(edit_id);
-                		current = parseInt(upvotes.innerHTML);
-                		if(data > current) {
-                			document.getElementById('upvote' + edit_id).src = "img/upvotes/upvoted.png";
-                			@if(Auth::check())
-                			@if(Auth::user()->enable_memes)
-                			document.getElementById('upvote-emote').src = "img/upvotes/upvote-emote.gif";
-                			document.getElementById('upvote-frame').style.display = "block";
-                			setTimeout(function() {
-                			        $('.upvote-frame').css('display', 'none');
-                			    }, 1900);
-                			@endif
-                			@endif
-                		} else {
-                			document.getElementById('upvote' + edit_id).src = "img/upvotes/upvote-dark.png";
-                			@if(Auth::check())
-                			@if(Auth::user()->enable_memes)
-                			document.getElementById('upvote-emote').src = "img/upvotes/downvote-emote.png";
-                			document.getElementById('upvote-frame').style.display = "block";
-                			setTimeout(function() {
-                			        $('.upvote-frame').css('display', 'none');
-                			    }, 1600);
-                			@endif
-                			@endif
-                		}
-                		upvotes.innerHTML = data;
-                	}
+							type: 'danger'
+						});
+					} else {
+						upvotes = document.getElementById(edit_id);
+						current = parseInt(upvotes.innerHTML);
+						if(data > current) {
+							document.getElementById('upvote' + edit_id).src = "img/upvotes/upvoted.png";
+							@if(Auth::check() && Auth::user()->enable_memes)
+							document.getElementById('upvote-emote').src = "img/upvotes/upvote-emote.gif";
+							document.getElementById('upvote-frame').style.display = "block";
+							setTimeout(function() {
+									$('.upvote-frame').css('display', 'none');
+								}, 1900);
+							@endif
+						} else {
+							document.getElementById('upvote' + edit_id).src = "img/upvotes/upvote-dark.png";
+							@if(Auth::check() && Auth::user()->enable_memes)
+							document.getElementById('upvote-emote').src = "img/upvotes/downvote-emote.png";
+							document.getElementById('upvote-frame').style.display = "block";
+							setTimeout(function() {
+									$('.upvote-frame').css('display', 'none');
+								}, 1600);
+							@endif
+						}
+						upvotes.innerHTML = data;
+					}
                 },
                 error: function (data) {
-                	alert("Error upvoting");
+					alert("Error upvoting");
                 }
-	        });
-	        
+			});
 		}
 		function jumpToSlide(slide) {
 			slides = $('.slide').length;
@@ -116,9 +111,9 @@
 	</div>
 
 	<div class="dots-container">
-	  <span class="dot" onclick="jumpToSlide('slide-1')" style="background-color: #646464;"></span> 
-	  <span class="dot" onclick="jumpToSlide('slide-2')"></span> 
-	  <span class="dot" onclick="jumpToSlide('slide-3')"></span> 
+		<span class="dot" onclick="jumpToSlide('slide-1')" style="background-color: #646464;"></span> 
+		<span class="dot" onclick="jumpToSlide('slide-2')"></span> 
+		<span class="dot" onclick="jumpToSlide('slide-3')"></span> 
 	</div>
 	
 	<div class="container-fluid pes-container">
@@ -239,6 +234,21 @@
 					</div>
 				</div>
 			</div>
+			<div class="col-12 col-lg-6">
+				<div class="pes">
+					<div class="row">
+						<div class="col col-lg-12" align="center">
+							<img class="title" src="img/pes/2019.png" ondragstart="return false;"/>
+						</div>
+					</div>
+					<center><div class="row pes-separator"></div></center>
+					<div class="row category-btns" align="center" style="padding-left: 15px; padding-right: 15px;">
+						<div class="col" style="padding: 3px;">
+							<div data-balloon="PES Ultimate Mod Manager" data-balloon-pos="up"><a href="/pumm"><img class="category" src="img/categories/home/pumm.png"/></a></div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -246,12 +256,12 @@
 		<div class="row">
 			<div class="col" align="center" style="margin-top: 40px;">
 				<div class="btn-group dropright">
-				    <h2 style="font-size: 45px; cursor: pointer;" class="noselect dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Most Viewed Posts</h2>
-				  <div class="dropdown-menu">
-				    <a class="dropdown-item" href="mvp/pes2014">PES 2014</a>
-				    <a class="dropdown-item" href="mvp/pes2016">PES 2016</a>
-				    <a class="dropdown-item" href="mvp/pes2017">PES 2017</a>
-				  </div>
+					<h2 style="font-size: 45px; cursor: pointer;" class="noselect dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Most Viewed Posts</h2>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="mvp/pes2014">PES 2014</a>
+						<a class="dropdown-item" href="mvp/pes2016">PES 2016</a>
+						<a class="dropdown-item" href="mvp/pes2017">PES 2017</a>
+					</div>
 				</div>
 			</div>
 		</div>

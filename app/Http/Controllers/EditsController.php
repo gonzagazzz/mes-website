@@ -82,7 +82,7 @@ class EditsController extends Controller
 				return response($edit->upvotes);
 			} else {
 				if (($key = array_search($edit->id, $posts_upvoted)) !== false) {
-				    unset($posts_upvoted[$key]);
+					unset($posts_upvoted[$key]);
 				}
 				$user->posts_upvoted = implode(';', $posts_upvoted);
 				$user->save();
@@ -114,7 +114,7 @@ class EditsController extends Controller
 			}
 		}
 		$data['countries'] = $countries;
- 		return View::make('browse.clubs', $data);
+		return View::make('browse.clubs', $data);
 	}
 
 	public function tools($version) {
@@ -161,6 +161,34 @@ class EditsController extends Controller
 				return Redirect::back();
 				break;
 		}
-		
+	}
+
+	public function pumm() {
+		return View::make('tools.pumm.index');
+	}
+
+	/* PES Ultimate Mod Manager Guides */
+	public function pummCreate() {
+		return View::make('tools.pumm.create');
+	}
+
+	public function pummAssociate() {
+		return View::make('tools.pumm.associate');
+	}
+
+	public function pummEdit() {
+		return View::make('tools.pumm.edit');
+	}
+
+	public function pummDelete() {
+		return View::make('tools.pumm.delete');
+	}
+
+	public function pummGenerate() {
+		return View::make('tools.pumm.generate');
+	}
+
+	public function pummImportExport() {
+		return View::make('tools.pumm.import-export');
 	}
 }
