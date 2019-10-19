@@ -33,7 +33,7 @@
 				</div>
 				<div class="dropdown-divider"></div>
 				<div class="row">
-					<div class="col" style="padding: 16px 0 8px 64px;">
+					<div class="col" style="padding: 16px 64px 8px 64px;">
 						<p><a href="{{ URL::to('/') }}/pumm/download">Download</a> the latest version of PES Ultimate Mod Manager</p>
 					</div>
 				</div>
@@ -49,7 +49,7 @@
 				</div>
 				<div class="dropdown-divider"></div>
 				<div class="row">
-					<div class="col" style="padding: 16px 0 8px 64px;">
+					<div class="col" style="padding: 16px 64px 8px 64px;">
 						<p>Extract downloaded file to the location you want</p>
 					</div>
 				</div>
@@ -65,7 +65,7 @@
 				</div>
 				<div class="dropdown-divider"></div>
 				<div class="row">
-					<div class="col" style="padding: 16px 0 8px 64px;">
+					<div class="col" style="padding: 16px 64px 8px 64px;">
 						<p>Run <i>PUMM.exe</i></p>
 					</div>
 				</div>
@@ -81,7 +81,7 @@
 				</div>
 				<div class="dropdown-divider"></div>
 				<div class="row">
-					<div class="col" style="padding: 16px 0 8px 64px;">
+					<div class="col" style="padding: 16px 64px 8px 64px;">
 						<p>Click on <b><i>Browse PES download folder</i></b> and select the folder <i>download</i> inside your Pro Evolution Soccer directory</p>
 					</div>
 				</div>
