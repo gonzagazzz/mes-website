@@ -343,7 +343,7 @@ h1 {
 .download-btn:focus {
 	outline : 0;
 	-moz-outline : 0;
-	border : 0;
+	border: 1px solid #f2f2f2;
 }
 
 .info-container {

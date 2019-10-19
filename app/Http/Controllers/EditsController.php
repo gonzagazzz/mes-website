@@ -191,4 +191,8 @@ class EditsController extends Controller
 	public function pummImportExport() {
 		return View::make('tools.pumm.import-export');
 	}
+	
+	public function pummDownload() {
+		return View::make('tools.pumm.download');
+	}
 }

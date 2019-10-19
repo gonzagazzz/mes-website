@@ -14,6 +14,9 @@
 
 Route::get('/', 'MainController@index');
 
+Route::get('pumm/download', [
+    'uses' => 'EditsController@pummDownload'
+]);
 Route::get('pumm/create', [
     'uses' => 'EditsController@pummCreate'
 ]);

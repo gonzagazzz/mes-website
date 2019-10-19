@@ -12,6 +12,11 @@
 
 	<div class="container" style="margin-bottom: 100px; color: white;">
 		<div class="row">
+			<div class="col" style="text-align: center; padding-bottom: 35px;">
+				<img src="{{ URL::to('/') }}/img/pumm/logo.png" height="256"/>
+			</div>
+		</div>
+		<div class="row">
 			<div class="col">
 				<h2>Getting Started</h2><br>
 				<p>PES Ultimate Mod Manager <b>is a powerful tool to easily manage your Pro Evolution Soccer 2019 and 2020 mods.</b> Its purpose is to create an universal easy way of sharing and installing patches, and provide an intuitive platform to make your own sets of mods.</p>
@@ -29,7 +34,7 @@
 				<div class="dropdown-divider"></div>
 				<div class="row">
 					<div class="col" style="padding: 16px 0 8px 64px;">
-						<p>Download the latest version of PES Ultimate Mod Manager</p>
+						<p><a href="{{ URL::to('/') }}/pumm/download">Download</a> the latest version of PES Ultimate Mod Manager</p>
 					</div>
 				</div>
 			</div>
@@ -71,7 +76,7 @@
 			<div class="col card" style="padding: 0px; color: black !important;">
 				<div class="row">
 					<div class="col">
-						<h5 style="margin: 16px 0 8px 24px;">Step 4</h5>
+						<h5 style="margin: 16px 64px 8px 24px;">Step 4</h5>
 					</div>
 				</div>
 				<div class="dropdown-divider"></div>

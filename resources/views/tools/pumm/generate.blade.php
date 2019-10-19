@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>PUMM - MES Modder's Repository</title>
+	<title>PUMM - Generate DpFileList - MES Modder's Repository</title>
 	@include('partials/imports')
 </head>
 <body>
 	@include('partials/navbar')
     @include('partials/float')
 
-    <h1 style="margin-top: 55px;">PES Ultimate Mod Manager - Guide</h1>
+    <h1 style="margin-top: 55px;">PES Ultimate Mod Manager Documentation</h1>
     <h2 class="pumm">Generate DpFileList.bin</h2>
 
     <div class="container" style="margin-bottom: 100px; color: white;">
